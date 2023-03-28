@@ -1,6 +1,12 @@
 const canvas = document.querySelector('#canvas');
 
-const userChoice = 4;
+const userChoice = 16;
+const gridSelection = document.querySelector('#gridSelection');
+gridSelection.addEventListener('click', () => {
+    const userChoice = Number(prompt("How many squares per side you looking for?"));  
+})
+
+// const userChoice = Number(prompt("How many squares per side you looking for?"));
 
 // for (let i = 0; i < 4; i++) {
 //     const grid = document.createElement('div');
