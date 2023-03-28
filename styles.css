@@ -10,9 +10,9 @@
     border-color: black;
     padding: 0px;
     margin: 0px;
-    display: flex;
-    flex: 1 1 auto;
-    min-width: auto;    
+    display: flex; 
+    flex-grow: 1;
+    max-width: 100%;
 }
 
 .hover {
