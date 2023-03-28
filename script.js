@@ -1,6 +1,6 @@
 const canvas = document.querySelector('#canvas');
 
-const userChoice = 2;
+const userChoice = 4;
 
 // for (let i = 0; i < 4; i++) {
 //     const grid = document.createElement('div');

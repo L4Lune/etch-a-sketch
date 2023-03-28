@@ -1,8 +1,21 @@
+body {
+    display: flex
+}
+
 #canvas {
     display: flex;
+    flex-direction: column;
     flex-wrap:wrap;
     height: 500px;
     width: 500px;
+}
+
+.subCanvas {
+    padding: 0px;
+    margin: 0px;
+    display: flex; 
+    flex-grow: 1;
+    max-width: 100%;
 }
 
 .blankItem {
