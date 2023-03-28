@@ -1,7 +1,10 @@
 #canvas {
     display: flex;
     flex-wrap:wrap;
+    height: 210px;
+    width: 210px;
 }
+
 .blankItem {
     border-style: solid;
     border-color: black;
