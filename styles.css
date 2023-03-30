@@ -26,8 +26,13 @@ body {
     display: flex; 
     flex-grow: 1;
     max-width: 100%;
+    background-color: white;
 }
 
 .hover {
     background-color: grey;
+}
+
+.filled {
+    background-color: black;
 }
