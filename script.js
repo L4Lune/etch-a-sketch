@@ -1,6 +1,7 @@
-const canvas = document.querySelector('#canvas');
+const canvas = document.getElementById('canvas');
 const userChoice = 16;
 const gridSelection = document.querySelector('#gridSelection');
+const oldUserChoice = userChoice;
 
 
 // gridSelection.addEventListener('click', () => {
@@ -10,7 +11,10 @@ gridSelection.addEventListener('click', () => {
     let userChoice = Number(prompt("How many squares per side you looking for?"));
 })
 gridSelection.addEventListener('click', () => {
-    recreateGrid(userChoice);
+    removeGrid();
+})
+gridSelection.addEventListener('click', () => {
+    createGrid();
 })
 
 function createGrid(userChoice) {
@@ -32,9 +36,11 @@ function createGrid(userChoice) {
     }
 }
 
-function recreateGrid(userChoice) {
+function recreateGrid() {
     const removeSubcanvas = document.querySelector('.subCanvas');
-    canvas.removeChild(removeSubcanvas);
+    while (canvas.firstChild) {
+        canvas.removeChild(canvas.firstChild);
+    }
     for (let i = 0; i < userChoice; i++) {
         const subCanvas = document.createElement('div');
         subCanvas.classList.add('subCanvas');
@@ -54,8 +60,9 @@ function recreateGrid(userChoice) {
 }
 
 function removeGrid() {
-    const subCanvas = document.querySelector('.subCanvas');
-    canvas.removeChild(subCanvas);
+    while (canvas.firstChild) {
+        canvas.removeChild(canvas.firstChild);
+    }
 }
 
 for (let i = 0; i < userChoice; i++) {
